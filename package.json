@@ -1,0 +1,75 @@
+{
+  "name": "tplv",
+  "version": "0.1.0",
+  "description": "Nano(~200b) string template library, base on ES6 String template syntax.",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "esm",
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf -rf lib",
+    "lint": "eslint src/**/* __tests__/**/*",
+    "lint-staged": "lint-staged",
+    "test": "jest",
+    "ci": "npm run lint && npm run test",
+    "start": "tsc -w",
+    "build:umd": "rimraf ./dist && rollup -c",
+    "build:cjs": "rimraf ./lib && tsc --module commonjs --outDir lib",
+    "build:esm": "rimraf ./esm && tsc --module ESNext --outDir esm",
+    "build": "npm run build:cjs && npm run build:esm && npm run build:umd",
+    "prepublishOnly": "npm run build",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
+  },
+  "dependencies": {},
+  "keywords": [
+    "template",
+    "tplv"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@types/jest": "^24.0.18",
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/parser": "^2.3.1",
+    "coveralls": "^3.0.6",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "husky": "^3.0.5",
+    "jest": "^24.9.0",
+    "jest-electron": "^0.1.7",
+    "lint-staged": "^9.3.0",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.24.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-uglify": "^6.0.3",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.3"
+  },
+  "jest": {
+    "runner": "jest-electron/runner",
+    "testEnvironment": "jest-electron/environment",
+    "preset": "ts-jest",
+    "collectCoverage": true,
+    "testRegex": "(/__tests__/.*\\.(test|spec))\\.ts$",
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ]
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
