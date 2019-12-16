@@ -1,6 +1,6 @@
 # TPLV
 
-> Nano(~200b) string tplv library, base on ES6 String tplv syntax.
+> Nano(~200b) string tplv library, base on ES6 String template syntax.
 
 [![npm Version](https://img.shields.io/npm/v/tplv.svg)](https://www.npmjs.com/package/tplv)
 [![Build Status](https://github.com/hustcc/tplv/workflows/build/badge.svg)](https://github.com/hustcc/tplv/actions)
