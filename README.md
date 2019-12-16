@@ -8,16 +8,14 @@
 [![npm License](https://img.shields.io/npm/l/tplv.svg)](https://www.npmjs.com/package/tplv)
 
 
-
-## Usage
-
- - Install
+## Install
 
 ```bash
 $ npm i --save tplv
 ```
 
- - Case
+
+## Usage
  
 ```ts
 const template = '${ name }, ${value}(${percent} | Top ${array[2]})';
