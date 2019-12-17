@@ -1,6 +1,6 @@
 # TPLV
 
-> Nano(~200b) string tplv library, base on ES6 String template syntax.
+> Nano(~170b) string template library, based on ES6 String template syntax.
 
 [![npm Version](https://img.shields.io/npm/v/tplv.svg)](https://www.npmjs.com/package/tplv)
 [![Build Status](https://github.com/hustcc/tplv/workflows/build/badge.svg)](https://github.com/hustcc/tplv/actions)
@@ -18,6 +18,8 @@ $ npm i --save tplv
 ## Usage
  
 ```ts
+import render from 'tplv';
+
 const template = '${ name }, ${value}(${percent} | Top ${array[2]})';
 
 const data = {
