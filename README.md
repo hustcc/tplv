@@ -29,7 +29,7 @@ const data = {
   array: [1, 2, 3, 4]
 };
 
-render(template, data)); // will got `Hangzhou, 1200(13% | Top 3)`
+render(template, data); // `Hangzhou, 1200(13% | Top 3)` will be got
 ```
 
 
