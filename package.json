@@ -1,7 +1,7 @@
 {
   "name": "tplv",
   "version": "0.1.1",
-  "description": "Nano(~170) string template library, base on ES6 String template syntax.",
+  "description": "Nano(~170) string template library, basedgit s on ES6 String template syntax.",
   "license": "MIT",
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -14,10 +14,8 @@
   ],
   "scripts": {
     "clean": "rimraf -rf lib",
-    "lint": "eslint src/**/* __tests__/**/*",
     "lint-staged": "lint-staged",
     "test": "jest",
-    "ci": "npm run lint && npm run test",
     "start": "tsc -w",
     "build:umd": "rimraf ./dist && rollup -c",
     "build:cjs": "rimraf ./lib && tsc --module commonjs --outDir lib",
@@ -33,10 +31,6 @@
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@types/jest": "^24.0.18",
-    "@typescript-eslint/eslint-plugin": "^2.3.1",
-    "@typescript-eslint/parser": "^2.3.1",
-    "eslint": "^6.4.0",
-    "eslint-config-prettier": "^6.3.0",
     "husky": "^3.0.5",
     "jest": "^24.9.0",
     "jest-electron": "^0.1.7",
@@ -66,7 +60,6 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "eslint --fix",
       "prettier --write",
       "git add"
     ]

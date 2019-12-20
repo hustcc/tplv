@@ -1,11 +1,10 @@
 import render from '../src';
+// use jest-raw-loader to load
 // @ts-ignore
-import template from './template.tpl'; // use jest-raw-loader to load
+import template from './template.tpl';
 
 describe('tplv', () => {
   test('template', () => {
-    console.log(template);
-
     const data = {
       list: [
         { user: 'hustcc', site: 'https://atool.vip' },

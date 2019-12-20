@@ -21,7 +21,7 @@ jobs:
         run: |
           npm install
           npm run build
-          npm run ci
+          npm run test
       - name: coverall
         if: success()
         uses: coverallsapp/github-action@master

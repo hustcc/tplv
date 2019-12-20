@@ -48,7 +48,7 @@ ${
 </ul>
 ```
 
-Use it to render the template.
+Render the template file.
 
 ```ts
 import render from 'tplv';
