@@ -13,18 +13,4 @@ describe('tplv', () => {
     expect(render(template, data)).toBe(`Hangzhou, 1200
 (13% | Top 3)`);
   });
-
-  test('complex', () => {
-    const template = "<ul>${list.map(l => 'user:' + l.user + ', site:' + l.site)}</ul>";
-    const data = {
-      list: [
-        {
-          user: 'hustcc',
-          site: 'https://alipay.com',
-        },
-      ],
-    };
-
-    expect(render(template, data)).toBe('<ul>user:hustcc, site:https://alipay.com</ul>');
-  });
 });

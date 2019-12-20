@@ -10,5 +10,8 @@
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "prettier/@typescript-eslint"
-  ]
+  ],
+  "rules": {
+    "@typescript-eslint/ban-ts-ignore": 1
+  }
 }

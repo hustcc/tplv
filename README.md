@@ -16,7 +16,9 @@ $ npm i --save tplv
 
 
 ## Usage
- 
+
+ - simple template string
+
 ```ts
 import render from 'tplv';
 
@@ -31,6 +33,37 @@ const data = {
 
 render(template, data); // `Hangzhou, 1200(13% | Top 3)` will be got
 ```
+
+ - complex template file
+
+File `template.tpl`.
+
+```text
+<ul>
+${
+  list.map(l => (
+    `<li>user: ${l.user}, site: ${l.site}</li>`
+  )).join('\n')
+}
+</ul>
+```
+
+Use it to render the template.
+
+```ts
+import render from 'tplv';
+import template from './template.tpl';
+
+const data = {
+  list: [
+    { user: 'hustcc', site: 'https://atool.vip' },
+    { user: 'somebody', site: 'https://example.com' },
+  ],
+};
+
+render(template, data);
+```
+
 
 
 ## License

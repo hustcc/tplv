@@ -1,7 +1,7 @@
 {
   "name": "tplv",
   "version": "0.1.1",
-  "description": "Nano(~200b) string template library, base on ES6 String template syntax.",
+  "description": "Nano(~170) string template library, base on ES6 String template syntax.",
   "license": "MIT",
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -40,6 +40,7 @@
     "husky": "^3.0.5",
     "jest": "^24.9.0",
     "jest-electron": "^0.1.7",
+    "jest-raw-loader": "^1.0.1",
     "lint-staged": "^9.3.0",
     "prettier": "^1.18.2",
     "rimraf": "^3.0.0",
@@ -56,6 +57,9 @@
     "preset": "ts-jest",
     "collectCoverage": true,
     "testRegex": "(/__tests__/.*\\.(test|spec))\\.ts$",
+    "transform": {
+      ".+\\.tpl": "jest-raw-loader"
+    },
     "collectCoverageFrom": [
       "src/**/*.ts"
     ]
