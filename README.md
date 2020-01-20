@@ -112,4 +112,4 @@ $ npm run build
 
 ## License
 
-MIT@[hustcc](https://github.com/hustcc).
+Apache@[hustcc](https://github.com/hustcc).
