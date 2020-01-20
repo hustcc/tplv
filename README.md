@@ -20,7 +20,7 @@ $ npm i --save tplv
  - simple template string
 
 ```ts
-import render from 'tplv';
+import { render } from 'tplv';
 
 const template = '${ name }, ${value}(${percent} | Top ${array[2]})';
 
@@ -51,7 +51,7 @@ ${
 Render the template file.
 
 ```ts
-import render from 'tplv';
+import { render } from 'tplv';
 import template from './template.tpl';
 
 const data = {
@@ -64,6 +64,27 @@ const data = {
 render(template, data);
 ```
 
+ - `compile` mode
+
+> For 13x faster performance then render mode.
+
+```ts
+import { compile } from 'tplv';
+
+const template = '${ name }, ${value}(${percent} | Top ${array[2]})';
+
+const data = {
+  name: 'Hangzhou',
+  value: 1200,
+  percent: '13%',
+  array: [1, 2, 3, 4]
+};
+
+const fn = compile(template, ['name', 'value', 'percent', 'array']);
+
+fn(data); // `Hangzhou, 1200(13% | Top 3)` will be got
+```
+
 
 ## Perf
 
@@ -71,6 +92,22 @@ Run performance test with [rendering-test](https://aui.github.io/art-template/re
 
 ![perf](./perf.jpg)
 
+
+## Dev
+
+```bash
+# install dependence
+$ npm install
+
+# run test cases
+$ npm run test
+
+# run performance for render / compile mode
+$ npm run perf
+
+# build package
+$ npm run build
+```
 
 
 ## License
