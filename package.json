@@ -1,6 +1,6 @@
 {
   "name": "tplv",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Nano(~170), high performance string template library, basedgit s on ES6 String template syntax.",
   "license": "MIT",
   "main": "lib/index.js",
@@ -14,10 +14,10 @@
     "perf.jpg"
   ],
   "scripts": {
-    "clean": "rimraf -rf lib",
+    "clean": "rimraf -rf lib esm dist",
     "lint-staged": "lint-staged",
     "test": "jest",
-    "start": "tsc -w",
+    "perf": "ts-node ./perf/index.ts",
     "build:umd": "rimraf ./dist && rollup -c",
     "build:cjs": "rimraf ./lib && tsc --module commonjs --outDir lib",
     "build:esm": "rimraf ./esm && tsc --module ESNext --outDir esm",
@@ -32,6 +32,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@types/jest": "^24.0.18",
+    "benchmark": "^2.1.4",
     "husky": "^3.0.5",
     "jest": "^24.9.0",
     "jest-electron": "^0.1.7",
@@ -44,6 +45,7 @@
     "rollup-plugin-typescript": "^1.0.1",
     "rollup-plugin-uglify": "^6.0.3",
     "ts-jest": "^24.1.0",
+    "ts-node": "^8.6.2",
     "typescript": "^3.6.3"
   },
   "jest": {
