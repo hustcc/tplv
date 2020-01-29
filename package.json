@@ -1,8 +1,8 @@
 {
   "name": "tplv",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Nano(~170), high performance string template library, basedgit s on ES6 String template syntax.",
-  "license": "Apache",
+  "license": "Apache-2.0",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "browser": "dist/tplv.min.js",
