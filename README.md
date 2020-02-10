@@ -90,7 +90,7 @@ fn(data); // `Hangzhou, 1200(13% | Top 3)` will be got
 
 Run performance test with [rendering-test](https://aui.github.io/art-template/rendering-test/).
 
-![perf](./perf.jpg)
+![perf test](https://user-images.githubusercontent.com/7856674/74140231-abef9300-4c2f-11ea-875d-d57e845e9ef7.png)
 
 
 ## Dev
@@ -112,4 +112,4 @@ $ npm run build
 
 ## License
 
-Apache@[hustcc](https://github.com/hustcc).
+Apache-2.0@[hustcc](https://github.com/hustcc).

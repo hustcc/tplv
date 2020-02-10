@@ -1,7 +1,7 @@
 {
   "name": "tplv",
-  "version": "0.2.1",
-  "description": "Nano(~170), high performance string template library, basedgit s on ES6 String template syntax.",
+  "version": "0.2.2",
+  "description": "Nano(~170), high performance string template library, based on ES6 String template syntax.",
   "license": "Apache-2.0",
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -10,8 +10,7 @@
   "files": [
     "lib",
     "esm",
-    "dist",
-    "perf.jpg"
+    "dist"
   ],
   "scripts": {
     "clean": "rimraf -rf lib esm dist",
