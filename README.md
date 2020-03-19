@@ -17,7 +17,7 @@ $ npm i --save tplv
 
 ## Usage
 
- - simple template string
+ - `render` template string
 
 ```ts
 import { render } from 'tplv';
@@ -32,36 +32,6 @@ const data = {
 };
 
 render(template, data); // `Hangzhou, 1200(13% | Top 3)` will be got
-```
-
- - complex template file
-
-File `template.tpl`.
-
-```text
-<ul>
-${
-  list.map(l => (
-    `<li>user: ${l.user}, site: ${l.site}</li>`
-  )).join('\n')
-}
-</ul>
-```
-
-Render the template file.
-
-```ts
-import { render } from 'tplv';
-import template from './template.tpl';
-
-const data = {
-  list: [
-    { user: 'hustcc', site: 'https://atool.vip' },
-    { user: 'somebody', site: 'https://example.com' },
-  ],
-};
-
-render(template, data);
 ```
 
  - `compile` mode
@@ -112,4 +82,4 @@ $ npm run build
 
 ## License
 
-Apache-2.0@[hustcc](https://github.com/hustcc).
+MIT@[hustcc](https://github.com/hustcc).

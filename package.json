@@ -1,8 +1,8 @@
 {
   "name": "tplv",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "description": "Nano(~170), high performance string template library, based on ES6 String template syntax.",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "browser": "dist/tplv.min.js",
@@ -41,6 +41,7 @@
     "rimraf": "^3.0.0",
     "rollup": "^1.24.0",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-size": "^0.2.2",
     "rollup-plugin-typescript": "^1.0.1",
     "rollup-plugin-uglify": "^6.0.3",
     "ts-jest": "^24.1.0",
