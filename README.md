@@ -36,7 +36,7 @@ render(template, data); // `Hangzhou, 1200(13% | Top 3)` will be got
 
  - `compile` mode
 
-> For 13x faster performance then render mode.
+> For `13x` faster performance then render mode.
 
 ```ts
 import { compile } from 'tplv';
@@ -61,6 +61,24 @@ fn(data); // `Hangzhou, 1200(13% | Top 3)` will be got
 Run performance test with [rendering-test](https://aui.github.io/art-template/rendering-test/).
 
 ![perf test](https://user-images.githubusercontent.com/7856674/74140231-abef9300-4c2f-11ea-875d-d57e845e9ef7.png)
+
+
+## Principle
+
+The core code and principles are as follows:
+
+```ts
+
+function render(template: string, data: object): string {
+  const ks = Object.keys(data);
+  const vs = ks.map((k: any) => data[k]);
+
+  const t = `return \`${template}\``;
+  const f = new Function(...ks, t);
+
+  return f(...vs);
+}
+```
 
 
 ## Dev
