@@ -1,6 +1,6 @@
 # TPLV
 
-> Nano(~170b), High performance string template library, based on ES6 String template syntax.
+> Nano(~170 bytes), High performance string template library, based on ES6 String template syntax.
 
 [![npm Version](https://img.shields.io/npm/v/tplv.svg)](https://www.npmjs.com/package/tplv)
 [![Build Status](https://github.com/hustcc/tplv/workflows/build/badge.svg)](https://github.com/hustcc/tplv/actions)
@@ -68,10 +68,9 @@ Run performance test with [rendering-test](https://aui.github.io/art-template/re
 The core code and principles are as follows:
 
 ```ts
-
-function render(template: string, data: object): string {
+function render(template, data) {
   const ks = Object.keys(data);
-  const vs = ks.map((k: any) => data[k]);
+  const vs = ks.map((k) => data[k]);
 
   const t = `return \`${template}\``;
   const f = new Function(...ks, t);

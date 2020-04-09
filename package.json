@@ -1,11 +1,11 @@
 {
   "name": "tplv",
   "version": "1.0.0",
-  "description": "Nano(~170), high performance string template library, based on ES6 String template syntax.",
+  "description": "Nano(~170 bytes), high performance string template library, based on ES6 String template syntax.",
   "license": "MIT",
   "main": "lib/index.js",
   "module": "esm/index.js",
-  "browser": "dist/tplv.min.js",
+  "unpkg": "dist/tplv.min.js",
   "types": "lib/index.d.ts",
   "files": [
     "lib",
