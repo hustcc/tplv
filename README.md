@@ -8,6 +8,19 @@
 [![npm License](https://img.shields.io/npm/l/tplv.svg)](https://www.npmjs.com/package/tplv)
 
 
+## Features
+
+⚡️  Highest performance template engine
+🐣 Tiny footprint (~170 bytes)
+✨ Mode `render`, `compile` to be chosen
+🎸 Browser and NodeJs supported
+🎯 End-to-end testing with GitHub Action
+🎃 3 types of bundles exposed: ESM, CJS and UMD
+🔥 TypeScript Typings readily available
+😈 Simple but highly perfection API
+👓 Works on IE11
+
+
 ## Install
 
 ```bash
